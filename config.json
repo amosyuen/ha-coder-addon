@@ -1,0 +1,43 @@
+{
+	"arch": [
+		"aarch64",
+		"amd64",
+		"armv7"
+	],
+	"backup_exclude": [
+		"backups"
+	],
+	"description": "Code Development in the cloud",
+	"docker_api": true,
+	"hassio_api": true,
+	"image": "ghcr.io/coder/coder:latest",
+	"ingress": false,
+	"ingress_stream": false,
+	"init": false,
+	"map": [
+		"config:rw",
+		"share:rw",
+		"ssl"
+	],
+  "panel_icon": "mdi:code-braces",
+	"name": "Coder",
+	"options": {
+		"CODER_ACCESS_URL": "",
+		"CODER_WILDCARD_ACCESS_URL": "",
+		"CODER_PG_CONNECTION_URL ": "",
+		"CODER_TLS_ENABLE": false,
+		"CODER_TLS_CERT_FILE ": "fullchain.pem",
+		"CODER_TLS_KEY_FILE ": "privkey.pem"
+	},
+	"schema": {
+		"CODER_ACCESS_URL": "url?",
+		"CODER_WILDCARD_ACCESS_URL ": "url?",
+		"CODER_PG_CONNECTION_URL  ": "url?",
+		"CODER_TLS_ENABLE ": "bool",
+		"CODER_TLS_CERT_FILE ": "str?",
+		"CODER_TLS_KEY_FILE ": "str?"
+	},
+	"slug": "coder",
+	"url": "https://github.com/amosyuen/ha-coder-addon",
+	"version": "1.0.0"
+}
